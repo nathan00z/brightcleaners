@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
 </head>
- <header class="bg-white text-black">
+<main>
+  <header class="bg-white text-black flex-1">
     <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
-      <div class="navbar flex-1">
+      <div class="logo flex-1">
           <img src="../img/logo.svg" class="w-152 h-67 mr-2" alt="Home">
-      </div>
-      <div class="text-sm breadcrumbs flex flex-1 justify-center mr-150">
+      </div>  
+      <div class="navbar text-sm breadcrumbs flex flex-1 justify-center">
         <ul class="flex gap-4 items-center">
           <li>
             <a href="/home" class="flex items-center">
@@ -20,7 +22,7 @@
           </li> 
           <li>
             <a href="/documents" class="flex items-center">
-              <img src="../img/heart.svg" class="w-4 h-4 mr-2" alt="Home">
+              <img src="../img/shirt.svg" class="w-4 h-4 mr-2" alt="Home">
               Services
             </a>
           </li> 
@@ -40,7 +42,16 @@
       </div>
     </div>
   </header>
-<body class="bg-cyan-400">
- 
-</body>
+  <div class="flex w-full ml-20 my-20">
+    <div class="outline w-[278px] h-[334px] bg-white rounded-[26px]">
+      <div class="circle wl-[276px] h-[332px] rounded-[26px] border border-black">
+        <div class="w-[15px] h-[15px] relative">
+          <div class="w-[15px] h-[15px] left-0 top-0 absolute rounded-full border border-black"></div>
+          <div class="w-[13px] h-[13px] left-[1px] top-[1px] absolute bg-black rounded-full"></div>
+      </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
 </html>
