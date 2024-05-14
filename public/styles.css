@@ -1,1 +1,33 @@
+.navbar {
+    margin-left : 250px;
+}
 
+.circle {
+    margin-left: 250px;
+    margin-top: 10px;
+    
+}
+
+.innercircle{
+    
+}
+
+.card-background{
+    width: 444px;
+    height: 558px;
+}
+.card1{
+    margin-top: 250px;
+    margin-bottom: 250px;
+    align-items: center; /* Vertically centers the child in the container */
+    justify-content: center; /* Horizontally centers the child in the container */
+  
+}
+
+.card-outline{
+    border-radius: 25px;
+    width: 434px;
+    height: 548px;
+    margin-left: 5px;
+    margin-top: 5px;  
+}
