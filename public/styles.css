@@ -42,3 +42,31 @@
         top: 70px;
     }
 
+    .container {
+        display: flex;  /* Establishes a flex container */
+        flex-wrap: nowrap;  /* Prevents wrapping to ensure side-by-side layout */
+        align-items: stretch;  /* Stretches the items to fill the container vertically */
+        justify-content: center;  /* Centers the items horizontally */
+        gap: 20px;  /* Provides space between each group */
+        width: 100%;  /* Takes full width to accommodate multiple groups */
+        overflow-x: auto;  /* Allows horizontal scrolling if groups exceed viewport width */
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enables horizontal scrolling */
+        align-items: center; /* Centers items vertically */
+        justify-content: center; /* Centers items horizontally, consider 'flex-start' to align left */
+        width: 100%; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport or adjust as necessary */
+        background: #f8f8f8; /* Just to make it visible */
+    }
+    
+    .group {
+        width: 300px; /* Fixed width */
+        height: 400px; /* Fixed height */
+        margin: 10px; /* Space between groups */
+        background-color: #fff; /* Background color to make it visible */
+        border: 1px solid black; /* Border to visualize the containers */
+    }
