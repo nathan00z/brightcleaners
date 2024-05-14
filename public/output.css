@@ -834,6 +834,27 @@ html {
   color: var(--fallback-nc,oklch(var(--nc)/var(--tw-text-opacity)));
 }
 
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 1rem;
+  white-space: nowrap;
+}
+
+.divider:before,
+  .divider:after {
+  height: 0.125rem;
+  width: 100%;
+  flex-grow: 1;
+  --tw-content: '';
+  content: var(--tw-content);
+  background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
+}
+
 .link {
   cursor: pointer;
   text-decoration-line: underline;
@@ -948,6 +969,10 @@ html {
   }
 }
 
+.divider:not(:empty) {
+  gap: 1rem;
+}
+
 .link:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1060,6 +1085,10 @@ html {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1070,6 +1099,10 @@ html {
 
 .h-full {
   height: 100%;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .min-h-full {
@@ -1100,8 +1133,16 @@ html {
   flex: 1 1 0%;
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -1130,6 +1171,10 @@ html {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-box {
+  border-radius: var(--rounded-box, 1rem);
 }
 
 .border {
@@ -1163,6 +1208,11 @@ html {
 .bg-cyan-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+}
+
+.bg-base-300 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b3,oklch(var(--b3)/var(--tw-bg-opacity)));
 }
 
 .object-cover {
@@ -1284,6 +1334,31 @@ html {
   transform: rotateY(180deg);
 }
 
+@media (min-width: 1024px) {
+  .lg\:divider-horizontal {
+    flex-direction: column;
+  }
+
+  .lg\:divider-horizontal:before {
+    height: 100%;
+    width: 0.125rem;
+  }
+
+  .lg\:divider-horizontal:after {
+    height: 100%;
+    width: 0.125rem;
+  }
+
+  .lg\:divider-horizontal {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: auto;
+    width: 1rem;
+  }
+}
+
 .hover\:bg-neutral-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
@@ -1291,4 +1366,10 @@ html {
 
 .group:hover .group-hover\:\[transform\:rotateY\(180deg\)\] {
   transform: rotateY(180deg);
+}
+
+@media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
 }
