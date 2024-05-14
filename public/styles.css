@@ -1,72 +1,76 @@
-    .navbar {
+   
+   .navbar {
         margin-left : 250px;
     }
-
-    .circle {
-        margin-left: 305px;
-        margin-top: 10px;
-        
-    }
-
-    .circle img{
-        width: 17px;
-        height: 17px;
-    }
-
-    .card-background{
-        width: 344px;
-        height: 458px;
-        align-items: center; 
-    }
-    .card1{
-        margin-top: 250px;
-        margin-bottom: 250px;
-        justify-content: center; 
-    
-    }
-
-    .card-outline{
-        border-radius: 25px;
-        width: 334px;
-        height: 448px;
-        margin-left: 5px;
-        margin-top: 5px;  
-    }
-
-    .front-card {
-        display: flex; /* Enables flexbox */
-        justify-content: center; /* Centers horizontally */
-        align-items: center; /* Centers vertically */
-        width: 100%; /* Takes full width of its parent */
-        height: 217px; /* Adjust height as needed */
-        top: 70px;
-    }
-
-    .container {
-        display: flex;  /* Establishes a flex container */
-        flex-wrap: nowrap;  /* Prevents wrapping to ensure side-by-side layout */
-        align-items: stretch;  /* Stretches the items to fill the container vertically */
-        justify-content: center;  /* Centers the items horizontally */
-        gap: 20px;  /* Provides space between each group */
-        width: 100%;  /* Takes full width to accommodate multiple groups */
-        overflow-x: auto;  /* Allows horizontal scrolling if groups exceed viewport width */
-    }
-    
     .container {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto; /* Enables horizontal scrolling */
         align-items: center; /* Centers items vertically */
-        justify-content: center; /* Centers items horizontally, consider 'flex-start' to align left */
-        width: 100%; /* Full width of the viewport */
-        height: 100vh; /* Full height of the viewport or adjust as necessary */
-        background: #f8f8f8; /* Just to make it visible */
+        justify-content: flex-start; /* Aligns items to the start, useful for multiple cards */
+        gap: 5px; /* Space between each card */
+        padding: 10px;
+        width: auto; /* Ensures the container covers the full width of the viewport */
+        min-height: 20; /* Minimum height covers the full viewport height */
     }
     
     .group {
-        width: 300px; /* Fixed width */
-        height: 400px; /* Fixed height */
-        margin: 10px; /* Space between groups */
-        background-color: #fff; /* Background color to make it visible */
-        border: 1px solid black; /* Border to visualize the containers */
+        perspective: 1000px;
+        width: 314px; /* Width of the card */
+        height: 428px; /* Height of the card */
+        margin: auto; /* Centers the card vertically if needed */
+    }
+    
+    .card1 {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+    }
+    
+    .card1:hover {
+        transform: rotateY(180deg);
+    }
+    
+    .card-side {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: white;
+        border: 1px solid black;
+    }
+    
+    .back {
+        transform: rotateY(180deg);
+    }
+    
+    .circle {
+        position: absolute;
+        top: 10px;
+        left: 285px;
+        width: 17px;
+        height: 17px;
+    }
+    
+    .image-content {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .text-content{        width: 100%;
+        padding: 20px;
+        text-align: center;
+        position: relative;
     }

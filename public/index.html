@@ -6,87 +6,110 @@
   <link href="./output.css" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
 </head>
-<header class="bg-white text-black flex-1">
-  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
-    <div class="logo flex-1">
-        <img src="../img/logo.svg" class="w-152 h-67 mr-2" alt="Home">
-    </div>  
-    <div class="navbar text-sm breadcrumbs flex flex-1 justify-center">
-      <ul class="flex gap-4 items-center">
-        <li>
-          <a href="/home" class="flex items-center">
-            <img src="../img/home.svg" class="w-4 h-4 mr-2" alt="Home">
-            Home
-          </a>
-        </li> 
-        <li>
-          <a href="/documents" class="flex items-center">
-            <img src="../img/shirt.svg" class="w-4 h-4 mr-2" alt="Home">
-            Services
-          </a>
-        </li> 
-        <li>
-          <a href="/add-document" class="flex items-center">
-            <img src="../img/location.svg" class="w-4 h-4 mr-2" alt="Home">              
-            Location
-          </a>
-        </li>
-        <li>
-          <a href="/add-document" class="flex items-center">
-            <img src="../img/contacts.svg" class="w-4 h-4 mr-2" alt="Home">              
-            Contact
-          </a>
-        </li>
-      </ul>
+  <header class="bg-white text-black flex-1">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
+      <div class="logo flex-1">
+          <img src="../img/logo.svg" class="w-152 h-67 mr-2" alt="Home">
+      </div>  
+      <div class="navbar text-sm breadcrumbs flex flex-1 justify-center">
+        <ul class="flex gap-4 items-center">
+          <li>
+            <a href="/home" class="flex items-center">
+              <img src="../img/home.svg" class="w-4 h-4 mr-2" alt="Home">
+              Home
+            </a>
+          </li> 
+          <li>
+            <a href="/documents" class="flex items-center">
+              <img src="../img/shirt.svg" class="w-4 h-4 mr-2" alt="Home">
+              Services
+            </a>
+          </li> 
+          <li>
+            <a href="/add-document" class="flex items-center">
+              <img src="../img/location.svg" class="w-4 h-4 mr-2" alt="Home">              
+              Location
+            </a>
+          </li>
+          <li>
+            <a href="/add-document" class="flex items-center">
+              <img src="../img/contacts.svg" class="w-4 h-4 mr-2" alt="Home">              
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-
+  <!-- body  -->
 <main>
-  <body>
-    <div class="container">
-  <div class="group">
-    <div class="group relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-      <div class="absolute inset-0">
-        <div class="card1 flex">
-          <div class="card-background bg-white rounded-[26px]">
-              <div class="card-outline border border-black">
-                  <div class="circle relative">
-                      <img src="../img/circle.svg" alt="Home">              
-                  </div>            
-                  <div class="front-card relative flex items-center justify-center">
-                      <img src="../img/card1.svg" class="front" alt="card1">  
+<body>
+  <div class="container">
+      <div class="group">
+          <div class="card1">
+              <!-- Front of the card -->
+              <div class="card-side">
+                  <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+                  <div class="image-content">
+                      <img src="../img/drycleaning.svg" alt="Card Front Image">
+                  </div>
+              </div>
+              <!-- Back of the card -->
+              <div class="card-side back">
+                  <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+                  <div class="text-content">
+                      <h2 class="text-black">Professional Cleaning</h2>
+                      <div class="divider"></div>
+                      <p class="text-black">
+                        Our specialized dry cleaning techniques cater to a wide range of fabrics, from everyday wear to the most delicate garments. We use advanced, gentle cleaning solutions to remove stains and odors while preserving the integrity and appearance of your clothing.                      </p>
                   </div>
               </div>
           </div>
       </div>
-      </div>
-      <div class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
-        <div class="flex min-h-full flex-col items-center justify-center">
-          <div class="card1 flex">
-            <div class="card-background bg-white rounded-[26px]">
-                <div class="card-outline border border-black">
-                    <div class="circle relative">
-                        <img src="../img/circle.svg" alt="Home">              
-                    </div>            
-                    <div class="flex flex-col items-center justify-center">
-                      <div class="text-black text-[25.51px] font-normal font-['Harlow Solid']">Professional Cleaning</div>
-
-                      <div class="w-[235px] text-center text-black text-sm font-normal font-['Libre Bodoni']">
-                          Our specialized dry cleaning techniques cater to a wide range of fabrics, from everyday wear to the most delicate garments. We use advanced, gentle cleaning solutions to remove stains and odors while preserving the integrity and appearance of your clothing.
-                      </div>
-                  </div>
-                  
+      <!-- card2 -->
+      <div class="group">
+        <div class="card1">
+            <!-- Front of the card -->
+            <div class="card-side">
+                <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+                <div class="image-content">
+                    <img src="../img/tailoring.svg" alt="Card Front Image">
                 </div>
             </div>
+            <!-- Back of the card -->
+            <div class="card-side back">
+                <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+                <div class="text-content">
+                    <h2 class="h2">Expert Tailoring</h2>
+                    <div class="divider"></div>
+                    <p>
+                      Discover expert tailoring services that ensure your garments fit perfectly. Our skilled tailors handle everything from simple adjustments to complex alterations with precision and care.                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <!-- card3 -->
+    <div class="group">
+      <div class="card1">
+          <!-- Front of the card -->
+          <div class="card-side">
+              <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+              <div class="image-content">
+                  <img src="../img/shoe-repair.svg" alt="Card Front Image">
+              </div>
+          </div>
+          <!-- Back of the card -->
+          <div class="card-side back">
+              <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
+              <div class="text-content">
+                  <h2>Shoe Care</h2>
+                  <div class="divider"></div>
+                  <p>
+                    Extend the life of your footwear with our professional shoe repair services. From heel replacements to sole repairs, our experts rejuvenate your shoes with high-quality craftsmanship.              </div>
+          </div>
+      </div>
   </div>
-</div>
-</div>
+  </div>
 </body>
-
 </main>
 </html>
