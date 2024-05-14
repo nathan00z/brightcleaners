@@ -1,33 +1,44 @@
-.navbar {
-    margin-left : 250px;
-}
+    .navbar {
+        margin-left : 250px;
+    }
 
-.circle {
-    margin-left: 250px;
-    margin-top: 10px;
+    .circle {
+        margin-left: 305px;
+        margin-top: 10px;
+        
+    }
+
+    .circle img{
+        width: 17px;
+        height: 17px;
+    }
+
+    .card-background{
+        width: 344px;
+        height: 458px;
+        align-items: center; 
+    }
+    .card1{
+        margin-top: 250px;
+        margin-bottom: 250px;
+        justify-content: center; 
     
-}
+    }
 
-.innercircle{
-    
-}
+    .card-outline{
+        border-radius: 25px;
+        width: 334px;
+        height: 448px;
+        margin-left: 5px;
+        margin-top: 5px;  
+    }
 
-.card-background{
-    width: 444px;
-    height: 558px;
-}
-.card1{
-    margin-top: 250px;
-    margin-bottom: 250px;
-    align-items: center; /* Vertically centers the child in the container */
-    justify-content: center; /* Horizontally centers the child in the container */
-  
-}
+    .front-card {
+        display: flex; /* Enables flexbox */
+        justify-content: center; /* Centers horizontally */
+        align-items: center; /* Centers vertically */
+        width: 100%; /* Takes full width of its parent */
+        height: 217px; /* Adjust height as needed */
+        top: 70px;
+    }
 
-.card-outline{
-    border-radius: 25px;
-    width: 434px;
-    height: 548px;
-    margin-left: 5px;
-    margin-top: 5px;  
-}

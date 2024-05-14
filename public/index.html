@@ -41,15 +41,40 @@
     </div>
   </div>
 </header>
-<main>
-  <div class="card1 flex">
-    <div class="card-background  bg-white rounded-[26px]">
-      <div class="card-outline border border-black">
-        <div class="circle w-[15px] h-[15px] relative">
-          <div class="w-[15px] h-[15px] left-0 top-0 absolute rounded-full border border-black"></div>
-          <div class="w-[13px] h-[13px] left-[1px] top-[1px] absolute bg-black rounded-full"></div>
+<main">
+  <div class="group">
+    <div class="relative transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+      <div class="absolute inset-0">
+        <div class="card1 flex">
+          <div class="card-background bg-white rounded-[26px]">
+              <div class="card-outline border border-black">
+                  <div class="circle relative">
+                      <img src="../img/circle.svg" alt="Home">              
+                  </div>            
+                  <div class="front-card relative flex items-center justify-center">
+                      <img src="../img/card1.svg" class="front" alt="card1">  
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+        <div class="flex min-h-full flex-col items-center justify-center">
+          <div class="card1 flex">
+            <div class="card-background bg-white rounded-[26px]">
+                <div class="card-outline border border-black">
+                    <div class="circle relative">
+                        <img src="../img/circle.svg" alt="Home">              
+                    </div>            
+                    <div class="front-card relative flex items-center justify-center">
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
     </div>
+  </div>
+  
+</div>
 </main>
 </html>
