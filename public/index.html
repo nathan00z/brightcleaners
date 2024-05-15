@@ -3,63 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <Title>Bright Cleaners</Title>
   <link href="./output.css" rel="stylesheet">
   <link href="./styles.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="./nav-bar.css" rel="stylesheet"></link>
 </head>
-  <header class="bg-white text-black flex-1">
-    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
-      <div class="logo flex-1">
-          <img src="../img/logo.svg" class="w-152 h-67 mr-2" alt="Home">
-      </div>  
-      <div class="navbar text-sm breadcrumbs flex flex-1 justify-center">
-        <ul class="flex gap-4 items-center">
-          <li>
-            <a href="/home" class="flex items-center">
-              <img src="../img/home.svg" class="w-4 h-4 mr-2" alt="Home">
-              Home
-            </a>
-          </li> 
-          <li>
-            <a href="/documents" class="flex items-center">
-              <img src="../img/shirt.svg" class="w-4 h-4 mr-2" alt="Home">
-              Services
-            </a>
-          </li> 
-          <li>
-            <a href="/add-document" class="flex items-center">
-              <img src="../img/location.svg" class="w-4 h-4 mr-2" alt="Home">              
-              Location
-            </a>
-          </li>
-          <li>
-            <a href="/add-document" class="flex items-center">
-              <img src="../img/contacts.svg" class="w-4 h-4 mr-2" alt="Home">              
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
 
+<!-- header -->
+<header class="bg-white text-black">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center py-3">
+    <div class="logo">
+      <img src="../img/logo.svg" class="w-38 h-16 mr-2" alt="Home">
+    </div>
+    <nav class="flex items-center h-full">
+      <ul class="flex h-full space-x-0">
+        <li class="h-full">
+          <button class="square-button h-full flex items-center justify-center relative transition-all duration-300 hover:translate-y-8 focus:outline-none">
+            <img src="../img/tab.svg" alt="Home" class="w-full h-full absolute top-0 left-0">
+            <span class="relative z-10 text-black">Home</span>
+          </button>
+        </li>
+        <li class="h-full">
+          <button class="square-button h-full flex items-center justify-center relative transition-all duration-300 hover:translate-y-8 focus:outline-none">
+            <img src="../img/tab.svg" alt="About" class="w-full h-full absolute top-0 left-0">
+            <span class="relative z-10 text-black">About</span>
+          </button>
+        </li>
+        <li class="h-full">
+          <button class="square-button h-full flex items-center justify-center relative transition-all duration-300 hover:translate-y-8 focus:outline-none">
+            <img src="../img/tab.svg" alt="Services" class="w-full h-full absolute top-0 left-0">
+            <span class="relative z-10 text-black">Services</span>
+          </button>
+        </li>
+        <li class="h-full">
+          <button class="square-button h-full flex items-center justify-center relative transition-all duration-300 hover:translate-y-8 focus:outline-none">
+            <img src="../img/tab.svg" alt="Contact" class="w-full h-full absolute top-0 left-0">
+            <span class="relative z-10 text-black">Contact</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
   <!-- body  -->
 <main>
 <body>
-  <div class="container">
+  <div class="container mx-auto px-4">
       <div class="group">
           <div class="card1">
               <!-- Front of the card -->
-              <div class="card-side">
+              <div id="card1-f" class="card-side">
                   <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
                   <div class="image-content">
                       <img src="../img/drycleaning.svg" alt="Card Front Image">
                   </div>
               </div>
               <!-- Back of the card -->
-              <div class="card-side back">
+              <div id="card1-b" class="card-side back">
                   <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
                   <div class="text-content">
                       <h2 class="text-black">Professional Cleaning</h2>
@@ -74,14 +77,14 @@
       <div class="group">
         <div class="card1">
             <!-- Front of the card -->
-            <div class="card-side">
+            <div id="card2-f" class="card-side">
                 <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
                 <div class="image-content">
                     <img src="../img/tailoring.svg" alt="Card Front Image">
                 </div>
             </div>
             <!-- Back of the card -->
-            <div class="card-side back">
+            <div id="card2-b" class="card-side back">
                 <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
                 <div class="text-content">
                     <h2 class="text-black h1">Expert Tailoring</h2>
@@ -95,14 +98,14 @@
     <div class="group">
       <div class="card1">
           <!-- Front of the card -->
-          <div class="card-side">
+          <div id="card3-f" class="card-side">
               <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
               <div class="image-content">
                   <img src="../img/shoe-repair.svg" alt="Card Front Image">
               </div>
           </div>
           <!-- Back of the card -->
-          <div class="card-side back">
+          <div id="card3-b" class="card-side back">
               <div class="circle"><img src="../img/circle.svg" alt="Icon"></div>
               <div class="text-content">
                   <h2 class="text-black">Shoe Care</h2>

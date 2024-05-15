@@ -1,80 +1,80 @@
    
    .navbar {
-        margin-left : 250px;
-    }
+    margin-left : 250px;
+}
 
-    p{
-        font-family: 'Lucida Sans Regular', sans-serif;
-    }
-    .container {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center; /* Centers items vertically */
-        justify-content: flex-start; /* Aligns items to the start, useful for multiple cards */
-        gap: 5px; /* Space between each card */
-        padding: 10px;
-        width: auto; /* Ensures the container covers the full width of the viewport */
-        min-height: 20; /* Minimum height covers the full viewport height */
-    }
-    
-    .group {
-        width: 314px; /* Width of the card */
-        height: 428px; /* Height of the card */
-        margin: auto; /* Centers the card vertically if needed */
-    }
-    
-    .card1 {
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s;
-        transform-style: preserve-3d;
-    }
-    
-    .card1:hover {
-        transform: rotateY(180deg);
-    }
-    
-    .card-side {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        border-radius: 25px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        background: white;
-        border: 1px solid black;
-    }
-    
-    .back {
-        transform: rotateY(180deg);
-    }
-    
-    .circle {
-        position: absolute;
-        top: 10px;
-        left: 285px;
-        width: 17px;
-        height: 17px;
-    }
-    
-    .image-content {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        position: relative;
+.p{
+    font-family: 'Lucida Sans Regular', sans-serif;
+}
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; /* Centers items vertically */
+    justify-content: flex-start; /* Aligns items to the start, useful for multiple cards */
+    gap: 5px; /* Space between each card */
+    padding: 10px;
+    width: auto; /* Ensures the container covers the full width of the viewport */
+    min-height: 20; /* Minimum height covers the full viewport height */
+}
+
+.group {
+    width: 344px; /* Width of the card */
+    height: 428px; /* Height of the card */
+    margin: auto; /* Centers the card vertically if needed */
+}
+
+.card1 {
     width: 100%;
     height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card1:hover {
+    transform: rotateY(180deg);
+}
+
+.card-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    }
+    flex-direction: column;
+    background: white;
+    border: 1px solid black;
+}
 
-    .text-content{        
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        position: relative;
-    }
+.back {
+    transform: rotateY(180deg);
+}
+
+.circle {
+    position: absolute;
+    top: 10px;
+    left: 315px;
+    width: 20px;
+    height: 20px;
+}
+
+.image-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.text-content{        
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
