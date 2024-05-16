@@ -1,31 +1,76 @@
-    /* src/Navbar.css */
-
-    .navbar {
-        background-color: var(--navbar-bg-color, white); /* Default background color */
-    }
-
-    .logo{
-        right: 50px;
-    }
-    
-    .logo img {
-        width: var(--logo-width, 152px); /* Default logo width */
-        height: var(--logo-height, 67px); /* Default logo height */
-    }
-    
-    .menu-horizontal a {
-        color: var(--menu-item-color, black); /* Default text color */
-        padding: 0.5rem 1rem;
-        text-decoration: none;
-        border-radius: 0.5rem;
-        transition: background-color 0.3s;
-    }
-    
-    .menu-horizontal a:hover {
-        background-color: var(--menu-item-hover-color, blue); /* Default hover color */
-    }
-    
-    .menu-horizontal a:active {
-        background-color: var(--menu-item-active-color, red); /* Default active color */
-    }
-    
+:root {
+    --logo-margin-left: 10px; /* Customize the left margin of the logo */
+    --logo-margin-right: 10px; /* Customize the right margin of the logo */
+    --navbar-bg-color: white; /* Default background color */
+  }
+  
+  .navbar {
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Optional: add some padding to the navbar */
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: var(--logo-width, 150px); /* Default size, can be customized */
+    height: auto;
+    margin-left: var(--logo-margin-left, 0px);
+    margin-right: var(--logo-margin-right, 0px);
+  }
+  
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .menu-horizontal {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Ensure no default margin/padding */
+  }
+  
+  .menu-item {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .menu-item a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .menu-item a:hover,
+  .menu-item a:focus,
+  .menu-item a:active {
+    text-decoration: underline;
+  }
+  
+  .menu-item a.active {
+    text-decoration: underline;
+  }
+  
+  .menu-item a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+  }
+  
+  .menu-item a.active::after {
+    width: 100%;
+  }
+  

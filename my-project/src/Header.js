@@ -8,18 +8,18 @@ const Header = () => {
   return (
 <div className="navbar">
   <div className="flex-1">
-  <div className="logo">
-          <img src={logo} className="w-38 h-16 mr-2" alt="Home" />
-        </div>  </div>
+    <div className="logo">
+      <img src={logo} className="logo-img" alt="Home" />
+    </div>
+  </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Home</a></li>
-      <li><a>Location</a></li>
-      <li><a>Contact</a></li>
+      <li className="menu-item"><a href="index.html">Home</a></li>
+      <li className="menu-item"><a href="location.html">Location</a></li>
+      <li className="menu-item"><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
-    
   );
 };
 
