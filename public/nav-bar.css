@@ -14,7 +14,7 @@ header{
   border-radius: 10px;
 }
 
-.square-button img {
+.square-button img { 
   width: 100%; /* Ensure the image covers the button fully */
   height: 110%; 
   object-fit: cover;
