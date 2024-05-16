@@ -4,6 +4,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import './cards.css';
 import './styles.css';  // Importing the styles
+import './nav-bar.css';
 
 function App() {
   return (

@@ -1,0 +1,31 @@
+    /* src/Navbar.css */
+
+    .navbar {
+        background-color: var(--navbar-bg-color, white); /* Default background color */
+    }
+
+    .logo{
+        right: 50px;
+    }
+    
+    .logo img {
+        width: var(--logo-width, 152px); /* Default logo width */
+        height: var(--logo-height, 67px); /* Default logo height */
+    }
+    
+    .menu-horizontal a {
+        color: var(--menu-item-color, black); /* Default text color */
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        transition: background-color 0.3s;
+    }
+    
+    .menu-horizontal a:hover {
+        background-color: var(--menu-item-hover-color, blue); /* Default hover color */
+    }
+    
+    .menu-horizontal a:active {
+        background-color: var(--menu-item-active-color, red); /* Default active color */
+    }
+    

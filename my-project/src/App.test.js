@@ -1,17 +1,8 @@
-// src/App.js
-import React from 'react';
-import Header from './Header';
-import Main from './Main';
-import './output.css';
-import './styles.css';  // Importing the styles
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <Main />
-    </div>
-  );
-}
-
-export default App;
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
