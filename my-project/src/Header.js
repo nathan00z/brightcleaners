@@ -1,26 +1,30 @@
-// src/Header.js
+// src/components/Navbar.js
 import React from 'react';
-import './styles.css';  // Importing the styles
-import './nav-bar.css';  // Importing the styles
-import logo from './img/Logo.svg';
+import logo from './img/Logo.svg'; // Ensure this path is correct
+import './nav-bar.css'; // Ensure this file exists and is correctly imported
 
-const Header = () => {
+const Navbar = () => {
   return (
-<div className="navbar">
-  <div className="flex-1">
+    <nav className="navbar">
     <div className="logo">
       <img src={logo} className="logo-img" alt="Home" />
     </div>
-  </div>
-  <div className="flex-none">
-    <ul className="menu menu-horizontal px-1">
-      <li className="menu-item"><a href="index.html">Home</a></li>
-      <li className="menu-item"><a href="location.html">Location</a></li>
-      <li className="menu-item"><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</div>
+    <div className="menu-container">
+      <ul className="menu-horizontal">
+        <li className="menu-item">
+          <a href="#home" className="active">Home</a>
+        </li>
+        <li className="menu-item">
+          <a href="#services">Location</a>
+        </li>
+        <li className="menu-item">
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <div style={{ flexBasis: 'auto' }}></div> {/* Dummy element to balance flex space */}
+  </nav>
   );
 };
 
-export default Header;
+export default Navbar;
