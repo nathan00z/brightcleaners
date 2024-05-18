@@ -5,6 +5,7 @@ import Card from './components/Card';
 import drycleaningImage from './components/img/drycleaning.svg';
 import tailoringImage from './components/img/tailoring.svg';
 import shoeRepairImage from './components/img/shoe-repair.svg';
+import Footer from './components/footer.js';
 import './components/cards.css';
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
           ))}
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

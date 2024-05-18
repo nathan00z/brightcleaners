@@ -12,10 +12,10 @@ const Navbar = () => {
     <div className="menu-container">
       <ul className="menu-horizontal">
         <li className="menu-item">
-          <a href="#home" className="active">Home</a>
+          <a href="#home" className="active">Services</a>
         </li>
         <li className="menu-item">
-          <a href="#services">Location</a>
+          <a href="#location">Location</a>
         </li>
         <li className="menu-item">
           <a href="#contact">Contact</a>
