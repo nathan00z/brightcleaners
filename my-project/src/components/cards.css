@@ -1,42 +1,49 @@
-/* src/cards.css */
+/* src/components/cards.css */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
-.description-font{
+
+.description-font {
   font-family: "Libre Bodoni", serif;
 }
-.title-font{
+
+.title-font {
   font-family: 'Courgette', sans-serif;
-  font-size:30px
+  font-size: 30px;
 }
 
 .container {
   display: flex;
   flex-wrap: nowrap;
-  align-items: center; /* Centers items vertically */
-  justify-content: flex-start; /* Aligns items to the start, useful for multiple cards */
-  gap: 5px; /* Space between each card */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
   padding: 10px;
-  width: auto; /* Ensures the container covers the full width of the viewport */
-  min-height: 20px; /* Minimum height covers the full viewport height */
+  width: auto;
+  min-height: 20px;
 }
 
 .group {
-  width: 344px; /* Width of the card */
-  height: 428px; /* Height of the card */
-  margin: auto; /* Centers the card vertically if needed */
+  width: 344px;
+  height: 428px;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  display: flex; /* Ensure flex display */
+  display: flex;
   position: relative;
+  margin: auto;
 }
 
 .group.hidden {
   opacity: 0;
   pointer-events: none;
+  margin: 0;
+}
+
+.group.no-margin {
+  margin: 0;
 }
 
 .card1 {
   width: 100%;
   height: 100%;
-  transition: transform 0.5s, left 0.5s;
+  transition: transform 0.5s ease-in-out;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -46,7 +53,7 @@
 }
 
 .card1.disabled-hover .card-side:not(.back) {
-  pointer-events: none; /* Disable clicking on the front side only */
+  pointer-events: none;
 }
 
 .card-side {
@@ -65,16 +72,24 @@
 
 .back {
   transform: rotateY(180deg);
-  display: flex; /* Added */
-  align-items: center; /* Center content vertically */
-  justify-content: center; /* Center content horizontally */
-  flex-direction: column; /* Ensure content is in a column layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .circle {
   position: absolute;
   top: 10px;
   left: 315px;
+  width: 20px;
+  height: 20px;
+}
+
+.circle2 {
+  position: absolute;
+  top: 10px;
+  left: 715px;
   width: 20px;
   height: 20px;
 }
@@ -105,29 +120,25 @@
   cursor: pointer;
   text-decoration: none;
   position: relative;
-  z-index: 2; /* Ensure button is on top */
+  z-index: 2;
+  margin-top: 20px;
 }
 
 .button-text:hover {
   text-decoration: underline;
 }
 
-.arrow {
-  margin-left: 5px;
-  font-size: 16px;
-}
-
 .expanded-content {
   position: absolute;
   top: 0;
-  left: calc(100% + 20px); /* Positioned to the right of the card */
-  width: 344px; /* Match the card width */
-  height: 428px; /* Match the card height */
+  left: calc(100% + 100px);
+  width: 744px;
+  height: 428px;
   border: 1px solid black;
   border-radius: 25px;
   background-color: white;
-  padding: 20px;
-  display: none; /* Initially hidden */
+  padding: 30px;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -135,13 +146,12 @@
 }
 
 .expanded-content.show {
-  display: flex; /* Show when active */
+  display: flex;
 }
 
-.group.shift-left .card1 {
-  transform: translateX(-calc(100% + 20px)); /* Shift the card to the left */
-}
-
-.group.shift-left .expanded-content {
-  left: calc(100% + 40px); /* Position the expanded content to the right of the card */
+.group.shift-left {
+  margin: 0;
+  z-index: 200;
+  position: absolute; 
+  transform: translateX(calc(10% + 10px));
 }

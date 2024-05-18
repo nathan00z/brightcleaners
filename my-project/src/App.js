@@ -42,7 +42,6 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      
       <main>
         <div className="container mx-auto px-4">
           {cardsData.map(card => (
