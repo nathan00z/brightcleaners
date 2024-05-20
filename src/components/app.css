@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.text-primary {
+  color: #000000;
+  font-family: "Yesteryear", cursive;
+
+}
+
+.text-secondary {
+  font-family: "Libre Bodoni", serif;
+  color: #000000;
+
+}
+
+.text-dark {
+  color: #000000;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-light {
+  background-color: #3A73CD;
+}
+
+.intro-section {
+  background-image: url('gallery/intro-section-bg.jpg'); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  color: #ffffff; /* Ensure text is visible against the background image */
+  text-align: left;
+  height: 750px; /* Set height to auto */
+  filter:brightness(90%);
+  
+}
+
+
+
+.content {
+  background-image: url('img/paper.png'); /* Replace with the path to your image */
+  background-size: 750px;
+  background-position: center center; /* Center the background image horizontally and vertically */
+  background-repeat: no-repeat;
+  padding: 4rem 1rem;
+  color: #000000; /* Ensure text is visible against the background image */
+  text-align: center;
+  height: auto; /* Set height to auto */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
+}
+
+
+
+.services-section {
+  background-color: #3A73CD;
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

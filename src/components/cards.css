@@ -19,7 +19,7 @@
   padding: 10px;
   width: auto;
   min-height: 20px;
-  margin-top: 10%;
+  margin-top: 2%;
 }
 
 .group {
@@ -154,5 +154,5 @@
   margin: 0;
   z-index: 200;
   position: absolute; 
-  transform: translateX(calc(10% + 10px));
+  transform: translateX(calc(0% + 0px));
 }

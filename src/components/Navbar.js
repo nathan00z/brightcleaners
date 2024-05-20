@@ -13,10 +13,7 @@ const Navbar = () => {
       <div className="menu-container">
         <ul className="menu-horizontal">
           <li className="menu-item">
-          <Link to="home" smooth={true} duration={500} className="menu-item">
-              Home
-            </Link>
-            <Link to="services" smooth={true} duration={500} className="menu-item">
+            <Link to="services" smooth={true} duration={500} className="active">
               Services
             </Link>
           </li>
