@@ -43,7 +43,7 @@ body {
 }
 
 .intro-section {
-  background-image: url('gallery/intro-section-bg.jpg'); /* Replace with the path to your image */
+  background-image: url('gallery/intro-section-bg.png'); /* Replace with the path to your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,8 +63,8 @@ body {
   width: 600px;
   position: relative;
   z-index: 1; /* Ensure it stays above other elements */
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.7)); /* Add stronger shadow and glow */
-  animation: move-up 1s ease-out; /* Apply the move-up animation */
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 15px rgba(0, 0, 0, 0.3)); /* Subtle black shadow */
+  animation: move-up 1s ease-out;
 }
 
 .intro-logo::after {
@@ -76,7 +76,7 @@ body {
   bottom: -10px;
   border: 4px solid rgba(255, 255, 255, 0.7); /* Thicker border to make it stand out */
   pointer-events: none; /* Make sure the border is not interactive */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), 0 0 40px rgba(255, 255, 255, 0.7); /* Stronger shadow and glow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3); /* Subtle black shadow */
   border-radius: 10px; /* Slightly rounded corners for a smoother look */
   animation: move-up 1s ease-out; /* Apply the move-up animation */
 }
@@ -122,6 +122,14 @@ body {
 
 .dropoff-section h2 {
   margin-bottom: 1rem;
+}
+
+.modal-box {
+  background-color: white; /* Change the background color to white */
+  color: black; /* Ensure text color is black for readability */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow for better visibility */
 }
 
 
