@@ -73,7 +73,7 @@
   justify-content: center;
   flex-direction: column;
   background: white;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .back {
@@ -140,7 +140,7 @@
   left: calc(100% + 100px);
   width: 744px;
   height: 428px;
-  border: 1px solid black;
+  border: 3px solid black;
   border-radius: 25px;
   background-color: white;
   padding: 30px;
