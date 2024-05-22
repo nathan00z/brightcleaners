@@ -8,6 +8,7 @@ import shoeRepairImage from './components/img/shoe-repair.svg';
 import Footer from './components/Footer';
 import './components/cards.css';
 import './components/app.css';
+import './components/intro-sect.css'; // New CSS file for contact section
 import './components/location.css'; // New CSS file for location section
 import './components/contact.css'; // New CSS file for contact section
 import logo from './components/img/logo3.svg'; // Ensure this path is correct
@@ -123,34 +124,35 @@ const App = () => {
             ))}
           </div>
         </section>
+        <section id="location" className="location-section text-black bg-white py-12">
+  <div className="container mx-auto px-4">
+    <h2 className="location-header text-4xl font-bold mb-8 text-center">Our Location</h2>
+    <div className="content-container flex flex-wrap md:flex-nowrap justify-center md:justify-between mb-8">
+      <div className="map-container w-full md:w-1/2 md:pr-4 mb-8 md:mb-0">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110796.40281066156!2d-95.63778030273434!3d29.795344999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c423a3d2c387%3A0x383217f82cf1838a!2sBright%20Cleaners!5e0!3m2!1sen!2sus!4v1716040031132!5m2!1sen!2sus"
+          className="w-full h-full border-0"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Bright Cleaners Location"
+        ></iframe>
+      </div>
+      <div className="hours-container w-full md:w-1/2 md:pl-4">
+        <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
+        <p>Sunday: Closed</p>
+        <p>Monday: 9:00 AM - 6:00 PM</p>
+        <p>Tuesday: 9:00 AM - 6:00 PM</p>
+        <p>Wednesday: 9:00 AM - 6:00 PM</p>
+        <p>Thursday: 9:00 AM - 6:00 PM</p>
+        <p>Friday: 9:00 AM - 6:00 PM</p>
+        <p>Saturday: Closed</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section id="location" className="location-section text-white py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="location-header text-4xl font-bold mb-4 text-center">Our Location</h2>
-            <div className="map-container mb-8">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110796.40281066156!2d-95.63778030273434!3d29.795344999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c423a3d2c387%3A0x383217f82cf1838a!2sBright%20Cleaners!5e0!3m2!1sen!2sus!4v1716040031132!5m2!1sen!2sus"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Bright Cleaners Location"
-              ></iframe>
-            </div>
-            <div className="hours-container">
-              <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
-              <p>Sunday: Closed</p>
-              <p>Monday: 9:00 AM - 6:00 PM</p>
-              <p>Tuesday: 9:00 AM - 6:00 PM</p>
-              <p>Wednesday: 9:00 AM - 6:00 PM</p>
-              <p>Thursday: 9:00 AM - 6:00 PM</p>
-              <p>Friday: 9:00 AM - 6:00 PM</p>
-              <p>Saturday: Closed</p>
-            </div>
-          </div>
-        </section>
+
 
         <section id="contact" className="contact-section text-white py-12">
           <div className="container mx-auto px-4">

@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
-  --card-width-mobile: 244px;
-  --card-height-mobile: 328px;
+  --card-width-mobile: 194px;
+  --card-height-mobile: 258px;
 }
 .description-font {
   font-family: "Libre Bodoni", serif;
@@ -201,11 +201,11 @@
   }
 
   .description-font {
-    font-size: 13px; /* Adjust font size dynamically */
+    font-size: 10px; /* Adjust font size dynamically */
   }
 
   .title-font {
-    font-size: 20px; /* Adjust font size dynamically */
+    font-size: 16px; /* Adjust font size dynamically */
   }
 
   .expanded-content {
