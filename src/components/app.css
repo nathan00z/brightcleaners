@@ -136,9 +136,25 @@ body {
 .services-section {
   background-color: #3A73CD;
   padding: 4rem 1rem;
+  height: auto;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+  .services-section {
+    background-color: #3A73CD;
+    padding: 4rem 1rem;
+    height: auto;
+  }
+
+  body {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
 }

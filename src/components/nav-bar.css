@@ -1,13 +1,11 @@
-/* src/nav-bar.css */
-
 :root {
     --navbar-bg-color: white; /* Default background color */
     --menu-item-color: black; /* Default menu item text color */
     --menu-item-hover-color: #0056b3; /* Menu item hover color */
     --menu-item-active-color: #003f7f; /* Menu item active color */
-  }
-  
-  .navbar {
+}
+
+.navbar {
     background-color: var(--navbar-bg-color);
     display: flex;
     justify-content: space-between;
@@ -15,23 +13,23 @@
     padding: 0 20px; /* Optional: add some padding to the navbar */
     height: auto; /* Set height to auto */
     position: relative; /* Relative positioning for absolute children */
-  }
-  
-  .logo {
+}
+
+.logo {
     display: flex;
     align-items: center;
     margin-right: var(--logo-margin-right, 10px); /* Allow customization of right margin */
-  }
-  
-  .logo-img {
+}
+
+.logo-img {
     width: 150px; /* Default size, can be customized */
     height: auto;
     margin-left: 30px;
-    padding-top:12px;
-    padding-bottom:10px;
-  }
-  
-  .menu-container {
+    padding-top: 12px;
+    padding-bottom: 10px;
+}
+
+.menu-container {
     position: absolute; /* Absolute positioning */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust back by 50% */
@@ -39,23 +37,23 @@
     justify-content: center;
     align-items: center;
     height: 100%; /* Ensure the container is the full height of the navbar */
-  }
-  
-  .menu-horizontal {
+}
+
+.menu-horizontal {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0; /* Ensure no default margin/padding */
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     position: relative;
     margin: 0 10px;
     display: flex; /* Ensure flex display for alignment */
     align-items: center; /* Center items vertically */
-  }
-  
-  .menu-item a {
+}
+
+.menu-item a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,15 +64,15 @@
     color: var(--menu-item-color);
     position: relative;
     z-index: 1;
-  }
-  
-  .menu-item a:hover,
-  .menu-item a:focus,
-  .menu-item a:active {
+}
+
+.menu-item a:hover,
+.menu-item a:focus,
+.menu-item a:active {
     color: var(--menu-item-hover-color);
-  }
-  
-  .menu-item a::after {
+}
+
+.menu-item a::after {
     content: "";
     display: block;
     width: 0;
@@ -84,12 +82,69 @@
     position: absolute;
     bottom: 0;
     left: 0;
-  }
-  
-  .menu-item a:hover::after,
-  .menu-item a:focus::after,
-  .menu-item a:active::after,
-  .menu-item a.active::after {
+}
+
+.menu-item a:hover::after,
+.menu-item a:focus::after,
+.menu-item a:active::after,
+.menu-item a.active::after {
     width: 100%;
-  }
-  
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin: 0; /* Ensure no margin */
+    }
+
+    .logo-img {
+        margin-left: 0;
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .menu-container {
+        position: static;
+        transform: none;
+        width: 100%;
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu-item a {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .menu-container.show {
+        display: flex; /* Show menu when toggled */
+    }
+}
+
+/* Hide hamburger menu on desktop */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}

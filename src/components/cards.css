@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
+:root {
+  --card-width-mobile: 244px;
+  --card-height-mobile: 328px;
+}
 .description-font {
   font-family: "Libre Bodoni", serif;
 }
@@ -30,7 +34,6 @@
   display: flex;
   position: relative;
   margin: auto;
-  animation: move-up 1s ease-out; /* Apply the move-up animation */
 }
 
 .group.hidden {
@@ -158,3 +161,81 @@
   position: absolute; 
   transform: translateX(calc(0% + 0px));
 }
+
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; /* Center content */
+    gap: 5px; /* Adjust gap between the cards */
+    padding: 10px; /* Reduce padding for mobile */
+    width: auto;
+    min-height: 20px;
+    margin-top: 2%;
+  }
+
+  .group {
+    width: var(--card-width-mobile); /* Use mobile width */
+    height: var(--card-height-mobile); /* Use mobile height */
+    margin: auto; /* Center the card */
+  }
+
+  .card1 {
+    width: 100%;
+    height: 100%; /* Maintain consistent height */
+  }
+
+
+  .card-side {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: var(--card-width-mobile);
+    height: var(--card-height-mobile);  }
+
+  .image-content,
+  .text-content {
+    padding: 10px;
+  }
+
+  .description-font {
+    font-size: 13px; /* Adjust font size dynamically */
+  }
+
+  .title-font {
+    font-size: 20px; /* Adjust font size dynamically */
+  }
+
+  .expanded-content {
+    position: relative;
+    left: 10px; /* Reduce gap between extended card and side card */
+    width: 100000000px;
+    height: var(--card-height-mobile);
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .group.shift-left {
+    position: relative;
+    transform: none;
+  }
+
+  .circle {
+    left: 89%;
+  }
+
+  .circle2{
+    left: 95%;
+
+  }
+
+  .group.shift-left {
+    margin: 0;
+    z-index: 200;
+    position: absolute; 
+    transform: translateX(calc(0% + 0px));
+  }
+}
+

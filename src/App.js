@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Card from './components/Card';
@@ -28,7 +29,7 @@ const App = () => {
       frontImage: drycleaningImage,
       title: 'Professional Cleaning',
       description:
-        'Our specialized dry cleaning techniques cater to a wide range of fabrics, from everyday wear to the most delicate garments. We use advanced, gentle cleaning solutions to remove stains and odors while preserving the integrity and appearance of your clothing.',
+        "We provide dry cleaning for all types of fabrics, from everyday wear to delicate garments. Our gentle techniques effectively remove stains and odors while preserving your clothing's integrity and appearance.",
     },
     {
       id: 2,
@@ -50,57 +51,55 @@ const App = () => {
     <div className="App">
       <Header />
       <main>
-      <section id="home" className="intro-section py-8">
+        <section id="home" className="intro-section py-8">
           <div className="content">
             <img src={logo} className="intro-logo" alt="Bright Cleaners Logo" />
             <div className="dropoff-section mt-8 text-center">
               <h2 className="intr-child text-4xl font-bold mb-4 text-white">Ready to Drop Off?</h2>
               <button className="dropoff-btn btn-primary" onClick={() => document.getElementById('my_modal_1').showModal()}>Drop Off Now!</button>
-<dialog id="my_modal_1" className="modal">
-  <div className="modal-box bg-white text-black p-6 rounded-lg shadow-lg">
-    <h3 className="font-bold text-lg">Drop Off Your Apparel for Service</h3>
-    <p className="py-4">Please fill out the information below to drop off your apparel for our services. We will take care of the rest!</p>
-    <form method="dialog" className="form-container flex flex-col items-center gap-4">
-      <label className="input-group input-group-vertical w-full">
-        <span className="text-black">Name</span>
-        <input type="text" className="input input-bordered w-full text-white bg-gray-800" placeholder="Your Name" required />
-      </label>
-      <label className="input-group input-group-vertical w-full">
-        <span className="text-black">Email</span>
-        <input type="email" className="input input-bordered w-full text-white bg-gray-800" placeholder="your.email@example.com" required />
-      </label>
-      <label className="input-group input-group-vertical w-full">
-        <span className="text-black">Contact Number</span>
-        <input type="tel" className="input input-bordered w-full text-white bg-gray-800" placeholder="Your Phone Number" required />
-      </label>
-      <label className="input-group input-group-vertical w-full">
-        <span className="text-black">Service Type</span>
-        <select className="select select-bordered w-full text-white bg-gray-800" required>
-          <option disabled selected>Select Service</option>
-          <option>Dry Cleaning</option>
-          <option>Tailoring</option>
-          <option>Shoe Repair</option>
-        </select>
-      </label>
-      <label className="input-group input-group-vertical w-full">
-        <span className="text-black">Instructions</span>
-        <textarea className="textarea textarea-bordered w-full text-white bg-gray-800" placeholder="Any special instructions for your service" rows="3"></textarea>
-      </label>
-      <div className="modal-action flex justify-center gap-4">
-        <button type="button" className="btn bg-black text-white hover:bg-gray-700" onClick={() => document.getElementById('my_modal_1').close()}>Close</button>
-        <button type="submit" className="btn bg-white text-black border border-black hover:bg-gray-200">Submit</button>
-      </div>
-    </form>
-  </div>
-</dialog>
-
-
+              <dialog id="my_modal_1" className="modal">
+                <div className="modal-box bg-white text-black p-6 rounded-lg shadow-lg">
+                  <h3 className="font-bold text-lg">Drop Off Your Apparel for Service</h3>
+                  <p className="py-4">Please fill out the information below to drop off your apparel for our services. We will take care of the rest!</p>
+                  <form method="dialog" className="form-container flex flex-col items-center gap-4">
+                    <label className="input-group input-group-vertical w-full">
+                      <span className="text-black">Name</span>
+                      <input type="text" className="input input-bordered w-full text-white bg-gray-800" placeholder="Your Name" required />
+                    </label>
+                    <label className="input-group input-group-vertical w-full">
+                      <span className="text-black">Email</span>
+                      <input type="email" className="input input-bordered w-full text-white bg-gray-800" placeholder="your.email@example.com" required />
+                    </label>
+                    <label className="input-group input-group-vertical w-full">
+                      <span className="text-black">Contact Number</span>
+                      <input type="tel" className="input input-bordered w-full text-white bg-gray-800" placeholder="Your Phone Number" required />
+                    </label>
+                    <label className="input-group input-group-vertical w-full">
+                      <span className="text-black">Service Type</span>
+                      <select className="select select-bordered w-full text-white bg-gray-800" required>
+                        <option disabled selected>Select Service</option>
+                        <option>Dry Cleaning</option>
+                        <option>Tailoring</option>
+                        <option>Shoe Repair</option>
+                      </select>
+                    </label>
+                    <label className="input-group input-group-vertical w-full">
+                      <span className="text-black">Instructions</span>
+                      <textarea className="textarea textarea-bordered w-full text-white bg-gray-800" placeholder="Any special instructions for your service" rows="3"></textarea>
+                    </label>
+                    <div className="modal-action flex justify-center gap-4">
+                      <button type="button" className="btn bg-black text-white hover:bg-gray-700" onClick={() => document.getElementById('my_modal_1').close()}>Close</button>
+                      <button type="submit" className="btn bg-white text-black border border-black hover:bg-gray-200">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </dialog>
             </div>
           </div>
         </section>
 
-        <section id="services" className="services-section text-center py-12 bg-light text-white">
-        <div class="border-top"></div>
+        <section id="services" className="services-section text-center bg-light text-white">
+          <div className="border-top"></div>
           <h2 className="text-3xl font-bold mb-4">Our Services</h2>
           <p className="text-lg mb-8">Providing top-notch care for your clothes and shoes</p>
 
