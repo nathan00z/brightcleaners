@@ -1,9 +1,10 @@
-// src/components/Card.js
 import React, { useState, useEffect } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import circleImage from './img/circle.svg';
 import './cards.css';
 
-const Card = ({ id, frontImage, title, description, onToggle, isActive }) => {
+const Card = ({ id, frontImage, images, title, description, onToggle, isActive }) => {
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
@@ -40,6 +41,8 @@ const Card = ({ id, frontImage, title, description, onToggle, isActive }) => {
             <h2 className="text-black title-font">{title}</h2>
             <div className="divider"></div>
             <p className="text-black description-font">{description}</p>
+          </div>
+          <div className="text-content">
             <button id={`button-${id}`} className="button-text" onClick={handleToggle}>
               {isActive ? 'See less ←' : 'See more →'}
             </button>
@@ -49,7 +52,22 @@ const Card = ({ id, frontImage, title, description, onToggle, isActive }) => {
       {isActive && (
         <div className="expanded-content show">
           <div className="circle2"><img src={circleImage} alt="Decorative circle icon" /></div>
-  
+          <div className="carousel-container">
+            <Carousel
+              showThumbs={false}
+              showIndicators={true}
+              showStatus={false}
+              infiniteLoop={true}
+              useKeyboardArrows={true}
+              dynamicHeight={true}
+            >
+              {images.map((image, index) => (
+                <div key={index}>
+                  <img src={image} alt={`${title} ${index + 1}`} />
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       )}
     </div>
