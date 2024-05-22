@@ -6,6 +6,7 @@ import drycleaningImage from './components/img/drycleaning.svg';
 import tailoringImage from './components/img/tailoring.svg';
 import shoeRepairImage from './components/img/shoe-repair.svg';
 import Footer from './components/Footer';
+import location from './components/img/location.svg';
 import './components/cards.css';
 import './components/app.css';
 import './components/intro-sect.css'; // New CSS file for contact section
@@ -100,45 +101,58 @@ const App = () => {
         </section>
 
         <section id="services" className="services-section text-center bg-light text-white">
-          <div className="border-top"></div>
-          <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-          <p className="text-lg mb-8">Providing top-notch care for your clothes and shoes</p>
+  <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+  <p className="text-lg mb-8">Providing top-notch care for your clothes and shoes</p>
 
-          <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            {cardsData.map((card) => (
-              <div
-                className={`group card ${activeCard && activeCard !== card.id ? 'hidden' : ''} ${
-                  activeCard === card.id ? 'shift-left' : ''
-                }`}
-                key={card.id}
-              >
-                <Card
-                  id={card.id}
-                  frontImage={card.frontImage}
-                  title={card.title}
-                  description={card.description}
-                  onToggle={handleToggle}
-                  isActive={activeCard === card.id}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+  <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    {cardsData.map((card) => (
+      <div
+        className={`group card ${activeCard && activeCard !== card.id ? 'hidden' : ''} ${
+          activeCard === card.id ? 'shift-left' : ''
+        }`}
+        key={card.id}
+      >
+        <Card
+          id={card.id}
+          frontImage={card.frontImage}
+          title={card.title}
+          description={card.description}
+          onToggle={handleToggle}
+          isActive={activeCard === card.id}
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
         <section id="location" className="location-section text-black bg-white py-12">
+        <h2 className="location-header text-4xl font-bold mb-8 text-center">Our Location</h2>
+
   <div className="container mx-auto px-4">
-    <h2 className="location-header text-4xl font-bold mb-8 text-center">Our Location</h2>
     <div className="content-container flex flex-wrap md:flex-nowrap justify-center md:justify-between mb-8">
       <div className="map-container w-full md:w-1/2 md:pr-4 mb-8 md:mb-0">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110796.40281066156!2d-95.63778030273434!3d29.795344999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c423a3d2c387%3A0x383217f82cf1838a!2sBright%20Cleaners!5e0!3m2!1sen!2sus!4v1716040031132!5m2!1sen!2sus"
-          className="w-full h-full border-0"
+          width="900"
+          height="450"
+          style={{ border: 0 }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Bright Cleaners Location"
         ></iframe>
       </div>
-      <div className="hours-container w-full md:w-1/2 md:pl-4">
+      <div className="hours-container md:w-1/2 md:pl-4">
+      <div className="address-container flex flex-col items-center md:flex-row md:justify-center mt-8">
+        <div className="marker-icon-container mr-2 mb-2 md:mb-0">
+            <img src={location} alt="Marker Icon" className="h-6 w-6" />
+        </div>
+        <div className="address-details">
+            <h3 className="text-2xl font-semibold mb-2">Address</h3>
+            <p>1234 Clean St.</p>
+            <p>Houston, TX 77001</p>
+        </div>
+    </div>
         <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
         <p>Sunday: Closed</p>
         <p>Monday: 9:00 AM - 6:00 PM</p>
@@ -147,10 +161,11 @@ const App = () => {
         <p>Thursday: 9:00 AM - 6:00 PM</p>
         <p>Friday: 9:00 AM - 6:00 PM</p>
         <p>Saturday: Closed</p>
-      </div>
+    </div>
     </div>
   </div>
 </section>
+
 
 
 

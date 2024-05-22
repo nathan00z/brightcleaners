@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from './img/Logo.svg'; // Ensure this path is correct
@@ -21,12 +22,12 @@ const Navbar = () => {
       <div className={`menu-container ${menuOpen ? 'show' : ''}`}>
         <ul className="menu-horizontal">
           <li className="menu-item">
-            <Link to="home" smooth={true} duration={500} className="menu-item">
+            <Link to="home" smooth={true} duration={500}>
               Home
             </Link>
           </li>
           <li className="menu-item">
-            <Link to="services" smooth={true} duration={500} className="menu-item">
+            <Link to="services" smooth={true} duration={500}>
               Services
             </Link>
           </li>
@@ -42,7 +43,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div style={{ flexBasis: 'auto' }}></div> {/* Dummy element to balance flex space */}
     </nav>
   );
 };

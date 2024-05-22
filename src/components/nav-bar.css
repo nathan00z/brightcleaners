@@ -29,10 +29,14 @@
     padding-bottom: 10px;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 24px; /* Increase size for better touch target */
+}
+
 .menu-container {
-    position: absolute; /* Absolute positioning */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust back by 50% */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,6 +103,7 @@
     }
 
     .logo {
+        order: 1; /* Ensure the logo is first */
         margin: 0; /* Ensure no margin */
     }
 
@@ -110,16 +115,23 @@
 
     .menu-toggle {
         display: block;
-        cursor: pointer;
-        padding: 15px;
+        order: 2; /* Ensure the toggle is after the logo */
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
     .menu-container {
-        position: static;
-        transform: none;
+        order: 3; /* Ensure the menu container is below the toggle */
         width: 100%;
         display: none; /* Hide menu by default */
         flex-direction: column;
+        background-color: var(--navbar-bg-color, white);
+        z-index: 10;
+    }
+
+    .menu-container.show {
+        display: flex; /* Show menu when toggled */
     }
 
     .menu-horizontal {
@@ -135,10 +147,6 @@
     .menu-item a {
         width: 100%;
         padding: 15px 20px;
-    }
-
-    .menu-container.show {
-        display: flex; /* Show menu when toggled */
     }
 }
 
