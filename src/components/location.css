@@ -44,7 +44,7 @@
 
 .hours-container h3 {
   font-family: 'Courgette', sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 5px;
 }
 
 .hours-container p {
@@ -63,33 +63,20 @@
     width: 100%; /* Full width for iframe */
     height: 300px; /* Adjust height for mobile */
   }
+}
 
+/* Desktop view adjustments */
+@media (min-width: 1025px) {
   .hours-container {
-    width: 100%;
-    padding: 1rem;
+    width: 50%; /* Adjust width for desktop view */
   }
 }
 
-/* Tablet view adjustments */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .map-container {
-    min-width: 100%; /* Take full width of the container */
-  }
-
-  .map-container iframe {
-    width: 100%; /* Full width for iframe */
-  }
-
-  .hours-container {
-    min-width: 100%;
-  }
-}
 .address-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align items to the start (left) */
   justify-content: center;
-  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -100,34 +87,38 @@
   }
 }
 
-.address-details {
+/* Shared Styles */
+.address-details, .phone-details {
   text-align: left; /* Ensure text is aligned to the left */
 }
 
 .address-details h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
-.address-details a {
+.address-details a, .phone-details a {
   text-decoration: none; /* Remove underline from the link */
   color: inherit; /* Inherit text color */
 }
 
-.address-details a:hover {
+.address-details a:hover, .phone-details a:hover {
   text-decoration: underline; /* Underline on hover */
 }
 
-.address-details p {
+.address-details p, .phone-details p {
   display: flex; /* Use flexbox for the p element */
   align-items: center; /* Align items vertically */
-  margin: 0;
 }
 
-.address-details img {
+.address-details img, .phone-details img {
   margin-right: 0.5rem; /* Space between image and text */
   width: 1.5rem; /* Adjust size as needed */
   height: 1.5rem; /* Adjust size as needed */
 }
 
+/* Unique Styles */
+.phone-details p {
+  margin-bottom: 20px; /* Additional bottom margin for phone details */
+}

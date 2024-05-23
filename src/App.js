@@ -9,6 +9,7 @@ import shoeRepairImage1 from './components/img/shoe-repair.svg';
 // import shoeRepairImage2 from './components/gallery/intro-section-bg.png';
 import Footer from './components/Footer';
 import location from './components/img/location.svg';
+import phone from './components/img/phone.svg';
 import './components/cards.css';
 import './components/app.css';
 import './components/intro-sect.css';
@@ -134,7 +135,7 @@ const App = () => {
         <section id="location" className="location-section text-black bg-white py-12">
           <h2 className="location-header text-4xl font-bold mb-8 text-center">Our Location</h2>
 
-          <div className="container mx-auto px-4">
+          <div className="container px-4">
             <div className="content-container flex flex-wrap md:flex-nowrap justify-center md:justify-between mb-8">
               <div className="map-container w-full md:w-1/2 md:pr-4 mb-8 md:mb-0">
                 <iframe
@@ -148,15 +149,25 @@ const App = () => {
                   title="Bright Cleaners Location"
                 ></iframe>
               </div>
-              <div className="hours-container md:w-1/2 md:pl-4">
-  <div className="address-container flex flex-col items-center md:flex-row md:justify-start mt-8">
+              <div className="hours-container">
+  <div className="address-container flex flex-col items-center md:flex-row md:justify-start">
     <div className="address-details">
-      <h3 className="text-2xl font-semibold mb-2">Address</h3>
-      <a href="https://www.google.com/maps/place/1234+Clean+St,+Houston,+TX+77001" target="_blank" rel="noopener noreferrer">
+      <h3 className="text-2xl font-semibold">Address</h3>
+      <a href="https://maps.app.goo.gl/85Xovp1RnUkospT58" target="_blank" rel="noopener noreferrer">
         <p>
-          <img src={location} alt="Marker Icon" />1234 Clean St.
+          <img src={location} alt="Marker Icon" />1401 Wirt Rd # D,
         </p>
-        <p>Houston, TX 77001</p>
+        <p>Houston, TX 77055</p>
+      </a>
+    </div>
+  </div>
+
+  <div className="address-container flex flex-col items-center md:flex-row md:justify-start">
+    <div className="phone-details">
+      <a href="tel:+17134653407">
+        <p>
+          <img src={phone} alt="Phone} Icon" />(713)465-3407
+        </p>
       </a>
     </div>
   </div>
@@ -169,24 +180,6 @@ const App = () => {
                 <p>Friday: 9:00 AM - 6:00 PM</p>
                 <p>Saturday: Closed</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="contact-section text-white py-12">
-          <div className="container mx-auto px-4">
-            <h2 className="contact-header text-4xl font-bold mb-4 text-center">Contact Us</h2>
-            <p className="text-lg mb-8 text-center">Get in touch with us for any inquiries or to schedule a service. We're here to help!</p>
-            <div className="contact-info text-center">
-              <p>
-                <strong>Phone:</strong> (123) 456-7890
-              </p>
-              <p>
-                <strong>Email:</strong> info@brightcleaners.com
-              </p>
-              <p>
-                <strong>Address:</strong> 123 Clean St, Clean City, CC 12345
-              </p>
             </div>
           </div>
         </section>
