@@ -95,6 +95,35 @@
     width: 100%;
 }
 
+.nav-button {
+    width: 25px; /* Set a fixed size for the buttons */
+    height: 25px;
+    transition: filter 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-button:hover {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(2366%) hue-rotate(190deg) brightness(98%) contrast(104%);
+}
+
+.menu-button {
+    position: relative;
+    display: flex; /* Ensure flex display for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.menu-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--menu-item-color);
+    position: relative;
+    z-index: 1;
+}
+
 /* Mobile view */
 @media (max-width: 768px) {
     .navbar {
@@ -147,6 +176,10 @@
     .menu-item a {
         width: 100%;
         padding: 15px 20px;
+    }
+
+    .menu-button {
+        display: none; /* Hide menu buttons on mobile */
     }
 }
 

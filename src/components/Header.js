@@ -1,8 +1,9 @@
-// src/components/Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from './img/Logo.svg'; // Ensure this path is correct
 import './nav-bar.css'; // Ensure this file exists and is correctly imported
+import buttonImage1 from './img/location.svg'; // Ensure this path is correct
+import buttonImage2 from './img/phone.svg'; // Ensure this path is correct
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,10 +37,15 @@ const Navbar = () => {
               Location
             </Link>
           </li>
-          <li className="menu-item">
-            <Link to="contact" smooth={true} duration={500}>
-              Contact
-            </Link>
+          <li className="menu-button">
+            <a href="https://maps.app.goo.gl/85Xovp1RnUkospT58" target="_blank" rel="noopener noreferrer">
+              <img src={buttonImage1} alt="Button 1" className="nav-button" />
+            </a>
+          </li>
+          <li className="menu-button">
+          <a href="tel:+17134653407">
+                          <img src={buttonImage2} alt="Button 2" className="nav-button" />
+            </a>
           </li>
         </ul>
       </div>

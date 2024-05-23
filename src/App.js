@@ -10,6 +10,7 @@ import shoeRepairImage1 from './components/img/shoe-repair.svg';
 import Footer from './components/Footer';
 import location from './components/img/location.svg';
 import phone from './components/img/phone.svg';
+import ScrollToTop from './components/ScrollToTop.js';
 import './components/cards.css';
 import './components/app.css';
 import './components/intro-sect.css';
@@ -183,6 +184,8 @@ const App = () => {
             </div>
           </div>
         </section>
+        <ScrollToTop />
+
       </main>
       <Footer />
     </div>
