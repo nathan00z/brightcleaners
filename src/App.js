@@ -149,16 +149,17 @@ const App = () => {
                 ></iframe>
               </div>
               <div className="hours-container md:w-1/2 md:pl-4">
-                <div className="address-container flex flex-col items-center md:flex-row md:justify-center mt-8">
-                  <div className="marker-icon-container mr-2 mb-2 md:mb-0">
-                    <img src={location} alt="Marker Icon" className="h-6 w-6" />
-                  </div>
-                  <div className="address-details">
-                    <h3 className="text-2xl font-semibold mb-2">Address</h3>
-                    <p>1234 Clean St.</p>
-                    <p>Houston, TX 77001</p>
-                  </div>
-                </div>
+  <div className="address-container flex flex-col items-center md:flex-row md:justify-start mt-8">
+    <div className="address-details">
+      <h3 className="text-2xl font-semibold mb-2">Address</h3>
+      <a href="https://www.google.com/maps/place/1234+Clean+St,+Houston,+TX+77001" target="_blank" rel="noopener noreferrer">
+        <p>
+          <img src={location} alt="Marker Icon" />1234 Clean St.
+        </p>
+        <p>Houston, TX 77001</p>
+      </a>
+    </div>
+  </div>
                 <h3 className="text-2xl font-semibold mb-4">Operating Hours</h3>
                 <p>Sunday: Closed</p>
                 <p>Monday: 9:00 AM - 6:00 PM</p>

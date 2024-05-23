@@ -165,7 +165,7 @@
   height: auto; /* Maintain aspect ratio */
   object-fit: contain; /* Ensures the image covers the area without distortion */
   border-radius: 10px;
-  
+
 }
 
 .carousel .control-arrow,
