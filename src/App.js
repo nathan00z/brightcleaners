@@ -15,7 +15,6 @@ import './components/cards.css';
 import './components/app.css';
 import './components/intro-sect.css';
 import './components/location.css';
-import './components/contact.css';
 import logo from './components/img/logo3.svg';
 
 const App = () => {
